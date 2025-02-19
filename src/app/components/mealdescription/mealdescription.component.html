@@ -1,0 +1,69 @@
+<section>
+    <div class="grid grid-cols-12 ">
+
+        <div class="col-span-4 ">
+            @for (Meal of MealDescription; track $index) {
+                <h1 class=" font-extrabold text-4xl ms-25">{{Meal.strMeal}}</h1>
+                <img [src]="Meal.strMealThumb" class="w-80 rounded-4xl " alt="">
+
+                <div class="flex justify-between">
+                    <a [href]="Meal.strYoutube" target="_blank" class="bg-red-600 p-2 rounded-2xl cursor-pointer text-white ms-1 mt-3"><button class=" "><i class="fa-brands fa-youtube"></i> Youtube</button></a>
+                    <a [href]="Meal.strSource" target="_blank" class="bg-green-300 p-2 rounded-2xl cursor-pointer text-white ms-1 mt-3 me-3"><button class=" "><i class="fa-solid fa-globe"></i> Source</button></a>
+                </div>
+            }
+        </div>
+        <div class="col-span-5 mt-10">
+            @for (Meal of MealDescription; track $index) {
+
+                <p class=" w-80 font-bold">{{Meal.strInstructions}}</p>
+            }
+        </div>
+
+        <div class="col-span-3 mt-10 ">
+
+            <div class="bg-amber-50 me-5 rounded-2xl p-2 ">
+                <h3 class="text-2xl font-extrabold">Ingredients</h3>
+                <div class="ms-5 bg-white w-[90%] rounded-4xl h-1"></div>
+
+                @for (Meal of MealDescription; track $index) {
+
+                    <div class="flex justify-between font-bold mt-3">
+                        <h5>{{Meal.strIngredient1}}: </h5>
+                        <h5>{{Meal.strMeasure1}}</h5>
+                    </div>
+                    <div class="flex justify-between font-bold mt-2">
+                        <h5>{{Meal.strIngredient2}}: </h5>
+                        <h5>{{Meal.strMeasure2}}</h5>
+                        
+                    </div>
+                    <div class="flex justify-between font-bold mt-2">
+                        <h5>{{Meal.strIngredient3}}: </h5>
+                        <h5>{{Meal.strMeasure3}}</h5>
+                       
+                    </div>
+                    <div class="flex justify-between font-bold mt-2">
+                        <h5>{{Meal.strIngredient4}}: </h5>
+                        <h5>{{Meal.strMeasure4}}</h5>
+                        
+                    </div>
+                    <div class="flex justify-between font-bold mt-2">
+                        <h5>{{Meal.strIngredient5}}: </h5>
+                        <h5>{{Meal.strMeasure5}}</h5>
+                        
+                    </div> <div class="flex justify-between font-bold mt-2">
+                        <h5>{{Meal.strIngredient6}}: </h5>
+                        <h5>{{Meal.strMeasure6}}</h5>
+                       
+                    </div> <div class="flex justify-between font-bold mt-2">
+                        <h5>{{Meal.strIngredient7}}: </h5>
+                        <h5>{{Meal.strMeasure7}}</h5>
+                      
+                    </div>
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

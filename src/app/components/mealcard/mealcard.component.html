@@ -1,0 +1,14 @@
+<div class=" relative bg-amber-50 h-96 lg:h-60  w-full rounded-4xl group hover:scale-105 hover:bg-white hover:shadow-2xl duration-700 ">
+    <div class="rounded-4xl  w-10 ">
+        <img [src]='meal.strMealThumb+"/preview"' class="ms-20 lg:ms-10 lg:w-35 w-80 absolute lg:-top-20 -top-40 rounded-[250px] group-hover:rotate-360 duration-700" alt="">
+    </div>
+    <div class="flex flex-col justify-center align-middle">
+        <h5 class="text-center font-extrabold lg:mt-20 mt-50">{{meal.strMeal}}</h5>
+    <h6 class="text-center text-blue-700"><i class="fa-solid fa-earth-africa me-0.5 mt-5"></i> {{meal.strArea}}</h6>
+
+    <div class="flex flex-col justify-center w-full">
+        <button class=" btn lg:ms-10 ms-45  py-1 cursor-pointer text-center my-5 break-words bg-green-400 hover:bg-green-600 hover:scale-120 duration-700 rounded-4xl w-30  text-white font-bold" [routerLink]="['meal-description',meal.idMeal]">View <br> Recipe</button>
+
+    </div>
+    </div>
+</div>

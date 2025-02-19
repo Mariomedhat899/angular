@@ -1,0 +1,14 @@
+<section class="lg:ms-80 lg:mt-80 mt-100">
+
+    <div class="grid sm:grid-cols-12 md:grid-cols-6 lg:grid-cols-4 lg:gap-10 lg:gap-y-25 gap-y-50 lg:gap-x-20">
+
+        @for (meal of allMeals; track meal.idMeal) {
+            <app-mealcard [meal]="meal" />
+        }@empty {
+            <h1 class=" text-6xl text-black font-extrabold  col-span-12 text-center animate-spin duration-100"><i class="fa-solid fa-spinner"></i></h1>
+        }
+
+    </div>
+
+
+</section>
